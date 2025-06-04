@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*0001*/
+        p {
+            color: red;
+            font-size: 30px;
+        }
+
+        /* 0010*/
+        .order {
+            color: green;
+        }
+
+        /* 0100 */
+        #unit {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 우선순위 적용에 따라 값이 달라진다.-->
+    <p>test1</p>
+    <!-- 1000 -->
+    <p id="unit" class="order" style="color: purple">test2</p>
+    <p id="unit">test3</p>
+    <p class="order">test4</p>
+
+</body>
+
+</html>
