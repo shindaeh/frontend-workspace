@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_003_css.html</title>
+    <link rel="stylesheet" href="./style/outer.css">
+    
+
+    <style type="text/css">
+    
+    /* style에서의 주석은 /* 작성
+    
+    body에서 <div class="one">작성 ->
+    style에서 실행 .OOO 클래스 값이 0일때 : 속성값 지정
+    
+    external은 head에서 <link rel="stylesheet" href="./style/outer.css">같은 경로를 설정하여
+     외부에서 outer.css를 만들어 현재 페이지에서 실행 <권장>
+
+    CSS(style)에서 속성값(글,배경색 등)을 변경 할 수있다.
+
+    html은 컨텐츠를 표현할때 사용 <body>문서의 구조를 작성한다.
+    css는 컨텐츠의 크기나 색 등에 적용하는 것<style>이다.
+
+    style="color:aqua">inline style로 스타일에서 바로 적용이 가능하다. <비권장>
+    
+    CSS우선순위 
+    1. inline style = style = 요소에 정의해놓은 스타일
+    = "color:aqua">inline style
+    2. internal style = head요소에 정의해놓은 스타일
+    = .one { background-color: red; }
+    3. external style = 외부에 파일로 정의해놓은 스타일
+    =  <link rel="stylesheet" href="./style/outer.css">
+
+    open live server를 edge에서 chrome 으로 바꾸는 방법
+     setting -> live server -> Live Server › Settings: Custom Browser 설정 변경
+
+   */
+            .one {
+                background-color: red;
+            }
+
+    </style>
+</head>
+<body>
+    
+    <div class="one">internal style</div>
+    <div id="two">external style</div>
+    <div style="color:aqua">inline style</div>
+</body>
+</html>

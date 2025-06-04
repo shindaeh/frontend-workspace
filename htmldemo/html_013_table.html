@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_013_table.html</title>
+    <style>
+        table {
+            background-color: yellow;
+            width: 500px;
+        }
+
+        /* table, th, td  ,로 그룹을 준다. 띄어쓰기 가능
+        오류 확인 방법    
+        제작중인 페이지 F12(Function) -> Elements -> Styles에서 오류를 확인할 수 있게 도와준다.
+
+           text 자동정렬 방법
+           톱니바퀴 정렬 -> SESTTINGS -> Format On Paste(붙여넣기 시) ,Format On Save(저장 시),Format On Type(입력 시)
+        */
+        table,
+        th,
+        td {
+
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+   <table>요소 :  2차원  격자모양의 표를 표시
+   <tr> 요소 : 표에서 행 구분
+   <td> 요소 : 표에서 열 구분
+   <th> 요소 : 표에서 제목 표시
+   <caption>요소 : 표 제목 표시
+   <thead> 요소 : 행그룹설정할때 제목 그룹 설정
+   <tfoot> 요소 : 행그룹설정할때 꼬리 그룹 설정
+   <tbody> 요소 : 행 그룹설정할때 내용 그룹 설정
+   colspan 속성 : 열병합 설정
+   rowspan 속성 : 행병합 설정
+   
+   colgroup 요소 : 테이블 열을 그룹화한다.
+   col 속성 : 테이블 열의 속성을 정의한다.
+  -->
+    <table>
+        <!--테이블의 제목-->
+        <caption> 서적 구입 비영 </caption>
+        <thead>
+            <tr>
+                <!-- 제목을 나타낸다. / th*4 를 하게되면 th가 4개 생성된다.-->
+                <th>서적명</th>
+                <th>출판사</th>
+                <th>가격</th>
+                <th>기타</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <!-- 표의 행2개를 합(병합)친다.-->
+                <td colspan="2">합계</td>
+                <td>80,000원</td>
+                <td></td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <!-- colspan="2",rowspan="N(병렬할 숫자)" 같은 tbody 또는 tfoot에서 해야지 적용이된다.-->
+            <tr>
+                <td>HTML</td>
+                <td>제우스</td>
+                <td>30,000</td>
+                <!-- rowspan 열의 병합-->
+                <td rowspan="3"></td>
+            </tr>
+
+            <tr>
+                <td>JSP</td>
+                <td>가메</td>
+                <td>50,000원</td>
+            </tr>
+
+            <tr>
+                <td>MYSQL</td>
+                <td>홍도</td>
+                <td>25,000원</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>

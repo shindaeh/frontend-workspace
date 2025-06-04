@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_014_table.html</title>
+
+    <style>
+        table {
+            background-color: yellow;
+            width: 500px;
+        }
+
+        table,
+        th,
+        td {
+
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--table>thead+tfoot+tbody = 한번에 생성할 수 있다.
+        <table>
+        <thead></thead>
+        <tfoot></tfoot>
+        <tbody></tbody>
+        </table>              -->
+    <table>
+
+        <caption>
+            수강생 현황
+        </caption>
+        <thead>
+            <tr>
+                <th rowspan="2"> 교실 </th>
+                <th colspan="2" id="s"> 수강생 </th>
+            </tr>
+            <!-- id는 중복이 되지 않게 생성해야 한다.(유니크값)-->
+            <tr>
+                <th id="m">남</th>
+                <th id="w">여</th>
+            </tr>
+        </thead>
+        <!-- tfoot은 합계 -->
+        <tfoot>
+            <!-- (tr>td*3)*2 = ()를 이용해서도 가능하다. -->
+            <tr>
+                <th>합계</th>
+                <td>30</td>
+                <td>7</td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <!-- headers는 현재위치를 나타낸다.-->
+                <th id="L1">L1반</th>
+                <td headers="L1 s m">10</td>
+                <td headers="L1 s w">5</td>
+            </tr>
+            <tr>
+                <th id="L2">L2반</th>
+                <td headers="L2 m">20</td>
+                <td headers="L2 w">2</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
