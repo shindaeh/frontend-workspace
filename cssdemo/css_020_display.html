@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_020_display.html</title>
+    <style>
+        /* display : 요소의 성질을 변경해주는 속성 */
+        /* inline요소이기 때문에 크기(width,height)가 적용되지 않는다.
+           크기를 변경하기 위해선 block(블록)요소로 변경해야 한다. */
+        a {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            display: block;
+            border: 1px solid black;
+            /* 글자의 수평을 가운데로 맞춘다. */
+            text-align: center;
+            /* 글씨를 수직(위아래)맞추는건 없기 때문에가운데로 맞추기위해 사용
+            요소의 세로값을 동일하게 넣어 위치를 조정한다.*/
+            line-height: 100px;
+        }
+
+        div {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline;
+        }
+
+        span {
+            background-color: olive;
+            width: 100px;
+            height: 100px;
+            /*inline요소 블록으로 변환*/
+            display: inline-block;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            /*수평 left center right justify*/
+            text-align: center;
+            /*수직 top middle bottom */
+            vertical-align: top;
+        }
+
+        .sp {
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+            /*inline요소에서 수평적렬*/
+            display: table-cell;
+        }
+
+        h1 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="http://www.w3schools.com">W3SCHOOLS</a>
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.daum.net">DAUM</a>
+    <div id="aa">display</div>
+    <span>웹문서</span>
+    <h1>테이블의 제목</h1>
+    <table border="1">
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+    </table>
+    <span class="sp">text</span>
+    <img src="images/btn.gif" />
+
+</body>
+
+</html>

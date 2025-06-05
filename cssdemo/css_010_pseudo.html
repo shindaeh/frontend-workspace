@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_010_pseudo.html</title>
+    <style>
+        /*자식 요소 중 전체 요소중 p의 요소가 짝수 일 때*/
+        p:nth-child(even) {
+            background-color: green;
+        }
+
+        /*짝수 일 때 위에 값과 같다.*/
+        p:nth-child(2n) {
+            background-color: orange;
+        }
+
+        /*자식 요소 중 전체 요소중 p의 요소가 홀수 일 때*/
+        p:nth-child(odd) {
+            background-color: blue;
+        }
+
+        /*홀수 일 때 위에 값과 같다.*/
+        p:nth-child(2n-1) {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>computer</p>
+        <span>test</span>
+        <p>moniter</p>
+        <p>televison</p>
+        <p>desk</p>
+        <p>top</p>
+    </div>
+
+</body>
+
+</html>

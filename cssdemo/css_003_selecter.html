@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_003_selecter.html</title>
+    <style>
+        /* body의 자식 h1 ,우선순위 0001 + 0001 = 0002 */
+        body h1 {
+            color: red;
+        }
+
+        /* 0001 */
+        h1 {
+            color: blue;
+        }
+
+        /*,(쉼표)는 그룹을 나타낸다. 각각 0001 */
+        h1,
+        h2 {
+            color: yellow
+        }
+
+        /* 띄어쓰기에 따라서 사용방법이 달라진다. 
+        띄어쓰기를 안할경우 h1의 .wrap이라는 구성을 의미하고 (1 -> 2 -> 3)
+        
+        띄어쓰기를 할 경우 해당요소의 .wrap을 의미한다. (1 -> 1-1)
+        
+        우선순위 0001 + 0010 = 0011 */
+        h1.wrap {
+            color: orange;
+        }
+
+        /* 우선순위 0100 */
+        #data {
+            color: yellow;
+        }
+
+        /* 0100 + 0010 = 0110 */
+        #data.cnt {
+            color: cyan;
+        }
+
+        /* !important 은 우선순위 계산이 무시되고 무조건 적용된다. */
+        p {
+            color: purple !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="wrap">title1</h1>
+    <div>
+        <div>
+            <h1>test2</h1>
+        </div>
+    </div>
+    <p id="data" class="cnt">
+        우선순위는 요소들에 적용할 스타일이 중복될 때 적용되는 스타일을 계산하는
+        방법이다.
+    </p>
+
+    <p class="cnt">
+        요소들에 스타일을 적용하기 위해서는 선택자를 지정해서 설명할 수 있다.
+    </p>
+
+</body>
+
+</html>

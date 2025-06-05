@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_009_pseudo.html</title>
+    <style>
+        /* nth-child(n) 와 nth-of-type(n) */
+        /* 모든 자식요소에서 p요소가 2번째 일때만 스타일 적용*/
+        /* div의 예시에서는 span이기 때문에 p가 아니라 적용X*/
+        p:nth-child(1) {
+            background-color: red;
+        }
+
+        /* 자식 요소들 중에서 p요소에서만 2번째 일때 스타일 적용*/
+        /* sapn은 p가 아니기 때문에 해당 X*/
+        p:nth-of-type(3) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>computer</p>
+        <span>test</span>
+        <p>moniter</p>
+        <p>televison</p>
+        <p>desk</p>
+        <p>top</p>
+    </div>
+
+</body>
+
+</html>

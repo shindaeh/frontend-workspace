@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_006_pseudo.html</title>
+    <style>
+        /* psedo class를 작성 할 했을 때 
+        link -> visited -> active -> hover 순서로(반드시) 작성해야 한다.
+        하나만 사용시에는 하나만 작성해도 되지만 모두 사용할때는 위의 순서를 적용해야 한다. */
+        /* unvisited link 클릭 전(방문 전)*/
+        a:link {
+            color: #FF0000;
+        }
+
+        /* visited link 클릭 후(재방문)*/
+        a:visited {
+            color: #00FF00;
+        }
+
+        /* mouse over link (마우스만 올려 놨을 때) */
+        a:hover {
+            color: #FF00;
+        }
+
+        /* selected link (마우스 선택 후 고정 시)*/
+        a:active {
+            color: #0000FF;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.w3schools.com/">>w3schools</a>
+</body>
+
+</html>
