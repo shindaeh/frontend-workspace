@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_031_login.html</title>
+    <style>
+        * {
+
+            margin: 0px;
+            padding: 0px;
+            border-width: 0px;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        form {
+            background-color: yellow;
+            width: 280px;
+            height: 100px;
+        }
+
+        fieldset.loginMenu {
+            width: 278px;
+            height: 98px;
+            border: 1px solid black;
+            /*자식 개체를 변경하기 위해 위치 기준*/
+            position: relative;
+        }
+
+        /*fieldset.loginMenu *(loginMenu의 모든 요소*/
+        fieldset.loginMenu * {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        /*fieldset의 자손loginMenu중 값이 id일 때*/
+        fieldset.loginMenu #id {
+            width: 150px;
+            height: 20px;
+            left: 20px;
+            top: 10px;
+            border: 1px solid black;
+        }
+
+        fieldset.loginMenu #password {
+            width: 150px;
+            height: 20px;
+            left: 20px;
+            top: 38px;
+            border: 1px solid black;
+        }
+
+        fieldset.loginMenu #remember {
+            width: 14px;
+            height: 14px;
+            left: 178px;
+            top: 13px;
+        }
+
+        fieldset.loginMenu label {
+            width: 74px;
+            height: 15px;
+            left: 198px;
+            top: 12px;
+            letter-spacing: -2px;
+        }
+
+        fieldset.loginMenu #loginBtn {
+            width: 60px;
+            height: 20px;
+            left: 178px;
+            top: 38px;
+        }
+
+        fieldset.loginMenu span a {
+            display: block;
+            width: 100px;
+            height: 20px;
+            font-size: 14px;
+            color: :#00bfff;
+            font-weight: border;
+            text-decoration: none;
+            text-align: center;
+            top: 64px;
+        }
+
+        fieldset.loginMenu span a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        fieldset.loginMenu legend {
+            width: 0px;
+            height: 0px;
+            font-size: 0px;
+            text-indent: -200px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <form action="#" method="post">
+            <div id="wrap">
+                <form action="#" method="post">
+                    <fieldset class="loginMenu">
+                        <legend class="hidden">로그인</legend>
+                        <input type="text" id="id" name="id" title="아이디입력" placeholder="아이디입력" />
+                        <input type="password" name="password" id="password" title="비밀번호입력" placeholder="비밀번호입력" />
+                        <input type="checkbox" name="remember" id="remember" />
+                        <label for="remember">아이디 저장</label>
+                        <input type="image" src="images/signin.gif" alt="로그인버튼" id="loginBtn" />
+                        <span><a href="#">회원가입</a></span>
+                    </fieldset>
+                </form>
+            </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>

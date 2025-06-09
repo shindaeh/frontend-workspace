@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_030_overflow.html</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            /*1. overflow: visible; 이 기본값
+              요소크기를 벗어나도 화면에 보인다.*/
+
+            /*2. overflow: hidden;
+              요소의 크기를 벗어나면 보이지 않게 된다.*/
+
+            /*3. overflow: scroll;
+              컨텐츠의 크기와 상관없이 스크롤이 생성된다.*/
+
+            /*4. overflow: auto;
+              요소의 크기보다 컨텐츠의 크기가 크면 스크롤이 생기고
+              작으면 생기지 않는다.(제일간단)*/
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        W3Schools is optimized for learning, testing, and training. Examples might
+        be simplified to improve reading and basic understanding. Tutorials,
+        references
+    </div>
+
+</body>
+
+</html>

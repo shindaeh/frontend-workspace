@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js022_for_of.html</title>
+</head>
+
+<body>
+
+    <script>
+
+        //for ~ of : element(요소)을 가져온다.
+        let color = ["red", "green", "blue"];
+        for (let element of color) {
+            console.log(element);
+        }
+
+        let subject = "script";
+        for (let idx in subject) {
+            console.log(idx);
+        }
+
+        for (let idx of subject) {
+            console.log(element);
+        }
+
+        for (let idx of subject) {
+            console.log(element);
+        }
+
+        console.log("=============")
+        let obj = { a: 1, b: 2, c: 3 };
+        for (let value of obj) {
+            console.log(value);
+        }
+
+        /*
+        for ~ of 문은 가능한 객체 (Arry, String, Map, Set, arguments)를 방복ㅎ는 객체
+        즉, interable(반복)속성을 가진 객체만 가능
+        */
+    </script>
+</body>
+
+</html>

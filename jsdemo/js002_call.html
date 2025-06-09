@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js002_call.html</title>
+    <script type="text/javascript" src="js/a.js"></script>
+    <!--  <script defer type="text/javascript" src="js/b.js"></script> -->
+</head>
+
+<body>
+
+    <p id="wrap">data</p>
+
+    <!--
+    body가 가장 먼저 참조되는데 defer를 이용하면 
+    참조 순서를 잡을 수 있다.-->
+    <script defer type="text/javascript" src="js/b.js"></script>
+
+</body>
+
+</html>
