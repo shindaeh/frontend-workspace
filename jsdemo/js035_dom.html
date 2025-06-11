@@ -11,15 +11,16 @@
 <body>
     <h1 id="selector" class="choice">선택자</h1>
 
-
-    <p>content1</p>
-    <p style="display: none" p>content2</p>
-    <p>content3</p>
-    <p style="display: none" p>content4</p>
-
+    <div>
+        <p>content1</p>
+        <p style="display: none" p>content2</p>
+        <p>content3</p>
+        <p style="display: none" p>content4</p>
+    </div>
 
     <form name="frm">
-        <input type="text" name="fname" placeholder="이름입력" value="홍길동" />
+        <!-- defaultvalue에 저장된다.   -->
+        <input type="text" name="fname" placeholder="이름입력" value="김배곺ㅁ" />
         <input type="text" name="fpass" placeholder="비밀번호 입력" />
         <button onclick="return process()">click</button>
     </form>

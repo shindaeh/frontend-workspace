@@ -15,6 +15,7 @@ console.log(pNode); // HTMLCollection(4) [p, p, p, p]
 console.log(pNode.length); // 4
 
 console.log(pNode[0]); // <p>content1</p>
+//자기자신만 있는 것을 호출할때는 배열만들어서 호출하면 됨 배열.메소드
 //item메서드를 사용
 console.log(pNode.item(0));// <p>content1</p>
 //p요소의 텍스트를 가져온다.
@@ -22,6 +23,21 @@ console.log(pNode[0].innerText); //content1
 console.log(pNode[1].innerText); //content2
 console.log(pNode[0].textContent); //content1
 console.log(pNode[1].textContent); //content2
+
+console.log('=========================')
+//부모입장에서 호출할때는 부모Node.메소드
+let divNode = document.getElementsByTagName('div')[0];
+console.log(divNode);
+console.log(divNode.innerText); // content1  content3
+console.log(divNode.textContent); // content1 content2 content3 content4
+console.log(divNode.innerHTML); //
+//  <p style="background-color: blue;">content1</p>
+//   <p style="display: none">content2</p>
+//   <p>content3</p>
+//   <p style="display: none">content4</p>
+console.log('=========================')
+//////////////////////////////////////
+
 //style.background-color를 하이푼(-)을 지우고 color의 Color로 대문자로 변경해서 사용 가능하다.
 pNode[0].style.backgroundColor = "blue";
 
@@ -41,3 +57,19 @@ let pList2 = document.querySelectorAll("p");
 console.log(pList2);
 //NodeList(4) [p, p, p, p]
 //0:p 1:p 2:p 3:p length:4
+
+function process() {
+    //alert 클릭하면 반응있는지 확인하기 위함
+    //클릭하면 click메세지가 뜬다.
+    //alert('click');
+
+    //form 이라는 요소에 있는 자손에게 접근할때 이름을 통해서 접근
+    let fname = document.frm.fname;
+    console.log(fname, typeof fname);
+    //내가 변경한 이름이 출력
+    console.log(fname.value);
+    //value속성에 넣은 값(홍길동)이 출력된다.(기본입력)
+    console.log(fname.defaultValue);
+    //false이기 때문에 클릭해도 안바뀜?
+    return false;
+}
